@@ -214,10 +214,10 @@ def player_stats(player_name):
             
     return None
 
-player_name = input('Enter the player name: ')
-player_info = player_stats(player_name)
+# player_name = input('Enter the player name: ')
+# player_info = player_stats(player_name)
 
-print(player_info)
+# print(player_info)
     
 #num_points_per_game- Irene
 #player_age - Eliab
@@ -230,8 +230,13 @@ def num_points_per_game():
 def player_age():
     pass
 
-def team_name():
-    pass
+def team_names():
+    teams_dict = game_dict()
+    team_names_list = []
+    for key in teams_dict.keys():
+        team_names_list.append(teams_dict[key]["team_name"])
+    return team_names_list
+print(team_names())
 
 def player_numbers():
     pass
